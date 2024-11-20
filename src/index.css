@@ -1,13 +1,51 @@
-body {
+*{
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+}
+body {
+  font-family:  Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+}
+#root{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn{
+  width: auto;
+  height: auto;
+  border:none;
+  padding: 15px 30px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.btn:hover{
+  cursor: pointer;
+  background: linear-gradient(to right, #B458DD, #8439DC); 
+  box-shadow: 0 0 15px rgba(132, 57, 220, 0.8), 0 0 25px rgba(180, 88, 221, 0.7); 
+  transform: translateY(-5px);
+}
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.btn:hover::before {
+  opacity: 1;
+  width: 0;
+  height: 0;
 }
