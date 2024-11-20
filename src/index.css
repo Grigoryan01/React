@@ -16,11 +16,17 @@ body {
   align-items: center;
 }
 .btn{
-  width: auto;
+  position: relative;
+  width: 20%;
   height: auto;
   border:none;
   padding: 15px 30px;
-  position: relative;
+  font-style: oblique;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--white);
+  border-radius: 25px;
+  background: var(--btn-background);
   overflow: hidden;
   transition: all 0.3s ease;
 }
